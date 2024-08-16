@@ -5,7 +5,7 @@
   </a>
   <h3 align="center">@douglasneuroinformatics/password-strength</h3>
   <p align="center">
-    An esbuild plugin to enable loading native node modules
+    A library for estimating the strength of passwords
   </p>
 </div>
 
