@@ -1,0 +1,65 @@
+{
+  "name": "@douglasneuroinformatics/password-strength",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@9.3.0",
+  "description": "A library for estimating the strength of passwords",
+  "author": "Joshua Unrau",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/DouglasNeuroInformatics/password-strength#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DouglasNeuroInformatics/password-strength.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DouglasNeuroInformatics/password-strength/issues"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write src",
+    "lint": "tsc --noEmit && eslint --fix src",
+    "prepare": "husky",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "peerDependencies": {
+    "typescript": "^5.1.0"
+  },
+  "dependencies": {
+    "@zxcvbn-ts/core": "^3.0.4",
+    "@zxcvbn-ts/language-common": "^3.0.4",
+    "@zxcvbn-ts/language-en": "^3.0.2",
+    "@zxcvbn-ts/language-fr": "^3.0.2",
+    "type-fest": "^4.24.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@douglasneuroinformatics/eslint-config": "^4.2.1",
+    "@douglasneuroinformatics/prettier-config": "^0.0.1",
+    "@douglasneuroinformatics/semantic-release": "^0.0.1",
+    "@douglasneuroinformatics/tsconfig": "^1.0.1",
+    "@vitest/coverage-v8": "^1.4.0",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
+    "typescript": "~5.4.5",
+    "vitest": "^1.4.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "prettier": "@douglasneuroinformatics/prettier-config",
+  "release": {
+    "extends": [
+      "@douglasneuroinformatics/semantic-release"
+    ]
+  }
+}
