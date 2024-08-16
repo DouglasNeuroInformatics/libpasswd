@@ -7,7 +7,7 @@ import type { IntRange } from 'type-fest';
 
 zxcvbnOptions.setOptions({ dictionary, graphs: adjacencyGraphs });
 
-type FeedbackLanguage = 'en' | 'fr';
+type PasswordFeedbackLanguage = 'en' | 'fr';
 
 type FeedbackTranslations = {
   suggestions: { [key: string]: string };
@@ -15,7 +15,7 @@ type FeedbackTranslations = {
 };
 
 type PasswordStrengthOptions = {
-  feedbackLanguage?: FeedbackLanguage;
+  feedbackLanguage?: PasswordFeedbackLanguage;
 };
 
 type PasswordStrengthResult = {
@@ -24,7 +24,7 @@ type PasswordStrengthResult = {
   success: boolean;
 };
 
-function translateFeedback(feedback: FeedbackType, language: FeedbackLanguage): FeedbackType {
+function translateFeedback(feedback: FeedbackType, language: PasswordFeedbackLanguage): FeedbackType {
   const translations: FeedbackTranslations = language === 'fr' ? frTranslations : enTranslations;
   return {
     suggestions: feedback.suggestions.map((suggestion) => translations.suggestions[suggestion]!),
@@ -40,3 +40,5 @@ export function estimatePasswordStrength(password: string, options?: PasswordStr
     success: result.score > 2
   };
 }
+
+export type { PasswordFeedbackLanguage, PasswordStrengthOptions, PasswordStrengthResult };
