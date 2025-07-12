@@ -17,3 +17,5 @@
 
 </div>
 <hr />
+
+This library is a wrapper for [zxcvbn-ts](https://zxcvbn-ts.github.io/zxcvbn/) to standardize the interfaces and implementation in DNP projects.
