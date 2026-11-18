@@ -33,9 +33,6 @@
     "test": "vitest run",
     "test:coverage": "vitest run --coverage"
   },
-  "peerDependencies": {
-    "typescript": "^5.1.0"
-  },
   "dependencies": {
     "@zxcvbn-ts/core": "^3.0.4",
     "@zxcvbn-ts/language-common": "^3.0.4",
